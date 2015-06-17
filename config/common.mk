@@ -1,5 +1,9 @@
 PRODUCT_BRAND ?= cyanogenmod
 
+WITH_DEXPREOPT := true
+KRAIT_TUNINGS := true
+STRICT_ALIASING := true
+
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
 TARGET_BOOTANIMATION_SIZE := $(shell \
@@ -138,7 +142,6 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     Eleven \
     LockClock \
-    CMUpdater \
     CMAccount \
     CMHome \
     CyanogenSetupWizard \
